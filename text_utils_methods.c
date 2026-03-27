@@ -385,15 +385,7 @@ void draw_table(int x, int y, int cell_width,
 
 /* tabela com cabeçalho */
 
-void draw_table_with_headers(int x, int y, int cell_width,
-                             int cols,
-                             const char *headers[],
-                             int rows,
-                             const char *data[rows][cols],
-                             const char *grid_color,
-                             const char *data_color,
-                             const char *header_color,
-                             const int *alignments)
+void draw_table_with_headers(int x, int y, int cell_width, int cols, const char *headers[], int rows, const char *data[rows][cols], const char *grid_color, const char *data_color, const char *header_color, const int *alignments)
 {
     if (!grid_color)
         grid_color = WHITE;
@@ -445,10 +437,7 @@ void draw_table_with_headers(int x, int y, int cell_width,
 
 /* barras de título */
 
-static void _print_title_generic(const char *text,
-                                 const char *box_color,
-                                 const char *text_color,
-                                 const char *charset[8])
+static void _print_title_generic(const char *text, const char *box_color, const char *text_color, const char *charset[8])
 {
     if (!box_color)
         box_color = WHITE;
@@ -462,45 +451,30 @@ static void _print_title_generic(const char *text,
     print_colored(text, text_color);
 }
 
-void print_title_bar(const char *text,
-                     const char *box_color,
-                     const char *text_color)
+void print_title_bar(const char *text, const char *box_color, const char *text_color)
 {
     _print_title_generic(text, box_color, text_color, SIMPLE_BORDER);
 }
-void print_title_bar_double(const char *text,
-                            const char *box_color,
-                            const char *text_color)
+void print_title_bar_double(const char *text, const char *box_color, const char *text_color)
 {
     _print_title_generic(text, box_color, text_color, DOUBLE_BORDER);
 }
-void print_title_bar_broad(const char *text,
-                           const char *box_color,
-                           const char *text_color)
+void print_title_bar_broad(const char *text, const char *box_color, const char *text_color)
 {
     _print_title_generic(text, box_color, text_color, BROAD_BORDER);
 }
-void print_title_bar_heavy(const char *text,
-                           const char *box_color,
-                           const char *text_color)
+void print_title_bar_heavy(const char *text, const char *box_color, const char *text_color)
 {
     _print_title_generic(text, box_color, text_color, HEAVY_BORDER);
 }
-void print_title_bar_round(const char *text,
-                           const char *box_color,
-                           const char *text_color)
+void print_title_bar_round(const char *text, const char *box_color, const char *text_color)
 {
     _print_title_generic(text, box_color, text_color, ROUND_BORDER);
 }
 
 /* barra de progresso */
 
-void print_progress_bar(double percentage,
-                        int line,
-                        const char *box_color,
-                        const char *bar_color,
-                        const char *text_color,
-                        const char *background_text_color)
+void print_progress_bar(double percentage, int line, const char *box_color, const char *bar_color, const char *text_color, const char *background_text_color)
 {
     if (line < 0 || line > 27)
         return;
@@ -596,9 +570,7 @@ void print_error(const char *text)
 
 /* campo de edição simples */
 
-void draw_edit_field(const char *label, int line,
-                     const char *box_color,
-                     const char *text_color)
+void draw_edit_field(const char *label, int line, const char *box_color, const char *text_color)
 {
     if (!box_color)
         box_color = WHITE;
