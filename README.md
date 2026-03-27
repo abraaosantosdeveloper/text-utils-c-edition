@@ -6,7 +6,7 @@ Biblioteca utilitaria em C para interfaces de terminal com:
 - desenho de caixas e tabelas
 - barras de titulo, status e progresso
 
-## Demonstracao
+## Demonstração
 
 Abaixo, dois prints do arquivo de demonstração que está presente no repositório para executar:
 
